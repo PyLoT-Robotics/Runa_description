@@ -51,7 +51,8 @@ node must supply joint states. Display launch never starts a serial driver.
 | Tool | `tool0` |
 
 All joints at zero reproduce the CAD's saved pose. The body, head mast and head
-camera remain fixed relative to the base while the arm lift moves.
+camera remain fixed relative to the base while the arm lift moves. The real lift
+is a stepper-driven ball screw operated with position commands.
 `config/drive_geometry.yaml` records the CAD nominal drive geometry.
 The source URDFs have no measured inertias or hardware drivers.
 
