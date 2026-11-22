@@ -1,0 +1,24 @@
+name: Jazzy model
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  model:
+    runs-on: ubuntu-24.04
+    container: ros:jazzy-ros-base
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: ws/src/Runa_description
+      - name: Dependencies
+        run: |
+          apt-get update
+          apt-get install -y ros-jazzy-xacro python3-pytest
+      - name: Build and validate
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          cd ws
+          colcon build --packages-select runa_description
+          source install/setup.bash
+          python3 -m pytest -q src/Runa_description/test
