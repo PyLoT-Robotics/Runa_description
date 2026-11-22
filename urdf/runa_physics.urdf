@@ -1,0 +1,710 @@
+<?xml version="1.0"?>
+<robot name="runa">
+  <material name="structure">
+    <color rgba="0.23 0.29 0.33 1" />
+  </material>
+  <material name="metal">
+    <color rgba="0.64 0.69 0.73 1" />
+  </material>
+  <material name="motor">
+    <color rgba="0.12 0.14 0.17 1" />
+  </material>
+  <material name="rubber">
+    <color rgba="0.065 0.07 0.08 1" />
+  </material>
+  <material name="printed">
+    <color rgba="0.12 0.55 0.60 1" />
+  </material>
+  <material name="camera">
+    <color rgba="0.70 0.75 0.80 1" />
+  </material>
+  <material name="optics">
+    <color rgba="0.08 0.09 0.17 1" />
+  </material>
+  <link name="base_footprint" />
+  <link name="base_link">
+    <visual name="base_link_structure">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_structure.stl" />
+      </geometry>
+      <material name="structure" />
+    </visual>
+    <visual name="base_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <visual name="base_link_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_motor.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <inertial>
+      <origin xyz="-0.015000008046627045 0.0 0.4887678846716881" />
+      <mass value="18" />
+      <inertia ixx="1.8862786793036301" iyy="1.876582677197917" izz="0.48969605217361584" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.40000002086162567 0.40800002217292786 1.044535830616951" />
+      </geometry>
+      <origin xyz="-0.015000008046627045 0.0 0.4887678846716881" />
+    </collision>
+  </link>
+  <link name="left_wheel_link">
+    <visual name="left_wheel_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/left_wheel_link_rubber.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <inertial>
+      <origin xyz="-1.862645149230957e-09 -7.450580596923828e-09 -3.3527612686157227e-08" />
+      <mass value="0.4" />
+      <inertia ixx="0.00039964954965345987" iyy="0.0006760325706716869" izz="0.00039964967469902866" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <cylinder radius="0.05035" length="0.0429999977350235" />
+      </geometry>
+      <origin rpy="1.5707963267948966 0 0" />
+    </collision>
+  </link>
+  <link name="right_wheel_link">
+    <visual name="right_wheel_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/right_wheel_link_rubber.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <inertial>
+      <origin xyz="-1.862645149230957e-09 7.450580596923828e-09 -3.3527612686157227e-08" />
+      <mass value="0.4" />
+      <inertia ixx="0.00039964954965345987" iyy="0.0006760325706716869" izz="0.00039964967469902866" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <cylinder radius="0.05035" length="0.0429999977350235" />
+      </geometry>
+      <origin rpy="1.5707963267948966 0 0" />
+    </collision>
+  </link>
+  <link name="rear_left_omni_link">
+    <visual name="rear_left_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_link_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <visual name="rear_left_omni_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_link_rubber.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <inertial>
+      <origin xyz="7.450580596923828e-09 1.1175870895385742e-08 0.0" />
+      <mass value="0.1" />
+      <inertia ixx="9.617610856785484e-05" iyy="0.0001660006659215919" izz="9.677404775857805e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <sphere radius="0.05035" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_link">
+    <visual name="rear_right_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_link_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <visual name="rear_right_omni_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_link_rubber.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <inertial>
+      <origin xyz="7.450580596923828e-09 -1.1175870895385742e-08 0.0" />
+      <mass value="0.1" />
+      <inertia ixx="9.617610856785484e-05" iyy="0.0001660006659215919" izz="9.677404775857805e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <sphere radius="0.05035" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_link">
+    <visual name="front_right_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_link_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <visual name="front_right_omni_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_link_rubber.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <inertial>
+      <origin xyz="0.0 -1.1175870895385742e-08 0.0" />
+      <mass value="0.1" />
+      <inertia ixx="9.617610856785484e-05" iyy="0.0001660006659215919" izz="9.677404775857805e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <sphere radius="0.05035" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_link">
+    <visual name="front_left_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_link_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <visual name="front_left_omni_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_link_rubber.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <inertial>
+      <origin xyz="0.0 1.1175870895385742e-08 0.0" />
+      <mass value="0.1" />
+      <inertia ixx="9.617610856785484e-05" iyy="0.0001660006659215919" izz="9.677404775857805e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <sphere radius="0.05035" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="lift_link">
+    <visual name="lift_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/lift_link_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <inertial>
+      <origin xyz="-0.016500001773238182 0.001479513943195343 -0.025250005768612027" />
+      <mass value="0.3" />
+      <inertia ixx="0.00016289998453147898" iyy="0.0001541249774638581" izz="0.00017122500723749413" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.05700000002980232 0.06000000238418579 0.05399999162182212" />
+      </geometry>
+      <origin xyz="-0.016500001773238182 0.001479513943195343 -0.025250005768612027" />
+    </collision>
+  </link>
+  <link name="arm_link_1">
+    <visual name="arm_link_1_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <visual name="arm_link_1_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_motor.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="arm_link_1_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <inertial>
+      <origin xyz="-0.0017499998211860657 -0.0026500001549720764 0.05313524484634402" />
+      <mass value="0.3" />
+      <inertia ixx="0.00035604769718717834" iyy="0.00039456045541586774" izz="0.000185937252953142" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.06700000166893005 0.05429999902844429 0.10627049446105952" />
+      </geometry>
+      <origin xyz="-0.0017499998211860657 -0.0026500001549720764 0.05313524484634402" />
+    </collision>
+  </link>
+  <link name="arm_link_2">
+    <visual name="arm_link_2_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_motor.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="arm_link_2_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <visual name="arm_link_2_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <inertial>
+      <origin xyz="0.0076249996200203896 1.8998980522155762e-07 0.12927500274963677" />
+      <mass value="0.3" />
+      <inertia ixx="0.001968012204949786" iyy="0.0018440518593286109" izz="0.00023558847421198273" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.04725000075995922 0.084799624979496 0.26745001738891006" />
+      </geometry>
+      <origin xyz="0.0076249996200203896 1.8998980522155762e-07 0.12927500274963677" />
+    </collision>
+  </link>
+  <link name="arm_link_3">
+    <visual name="arm_link_3_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_motor.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="arm_link_3_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <visual name="arm_link_3_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <inertial>
+      <origin xyz="0.1328668398782611 -9.999796748161316e-05 2.9999762773513794e-05" />
+      <mass value="0.3" />
+      <inertia ixx="0.0002458271903135911" iyy="0.001893342994283153" izz="0.002072557768138588" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.27276633121073246 0.09219999611377716 0.036499977111816406" />
+      </geometry>
+      <origin xyz="0.1328668398782611 -9.999796748161316e-05 2.9999762773513794e-05" />
+    </collision>
+  </link>
+  <link name="arm_link_4">
+    <visual name="arm_link_4_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_4_motor.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="arm_link_4_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_4_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <inertial>
+      <origin xyz="0.031219414668157697 0.0 0.010125011205673218" />
+      <mass value="0.3" />
+      <inertia ixx="0.0001531265429019938" iyy="0.0001840955078672782" izz="0.00021096895691865745" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.06956118484959006 0.05999999865889549 0.05024999380111694" />
+      </geometry>
+      <origin xyz="0.031219414668157697 0.0 0.010125011205673218" />
+    </collision>
+  </link>
+  <link name="arm_link_5">
+    <visual name="arm_link_5_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_motor.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="arm_link_5_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <visual name="arm_link_5_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <inertial>
+      <origin xyz="0.008600004017353058 -0.0024044569581747055 0.020380347967147827" />
+      <mass value="0.3" />
+      <inertia ixx="0.0004794063953190795" iyy="0.00039223076960910315" izz="0.0004779036813511526" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.08840000629425049 0.10630891844630241 0.08873933553695679" />
+      </geometry>
+      <origin xyz="0.008600004017353058 -0.0024044569581747055 0.020380347967147827" />
+    </collision>
+  </link>
+  <link name="left_finger_link">
+    <visual name="left_finger_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/left_finger_link_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <inertial>
+      <origin xyz="0.027500000433064997 0.0 0.0" />
+      <mass value="0.03" />
+      <inertia ixx="5.090006492885152e-06" iyy="1.4142502949417299e-05" izz="9.552496434180406e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.0609999883454293 0.009999999776482582 0.04400002956390381" />
+      </geometry>
+      <origin xyz="0.027500000433064997 0.0 0.0" />
+    </collision>
+  </link>
+  <link name="right_finger_link">
+    <visual name="right_finger_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/right_finger_link_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <inertial>
+      <origin xyz="0.027500000433064997 9.313225746154785e-10 0.0" />
+      <mass value="0.03" />
+      <inertia ixx="5.090006492885152e-06" iyy="1.4142502949417299e-05" izz="9.552496434180406e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.0609999883454293 0.009999999776482582 0.04400002956390381" />
+      </geometry>
+      <origin xyz="0.027500000433064997 9.313225746154785e-10 0.0" />
+    </collision>
+  </link>
+  <link name="tool0" />
+  <link name="head_pan_link">
+    <visual name="head_pan_link_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_pan_link_motor.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <visual name="head_pan_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_pan_link_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <inertial>
+      <origin xyz="0.011999999172985554 -0.0004999879747629166 0.019499998067052715" />
+      <mass value="0.3" />
+      <inertia ixx="7.224983721541786e-05" iyy="9.208109322766407e-05" izz="8.828125777654371e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.04650000296533108 0.03700000047683716 0.038999916068252816" />
+      </geometry>
+      <origin xyz="0.011999999172985554 -0.0004999879747629166 0.019499998067052715" />
+    </collision>
+  </link>
+  <link name="head_tilt_link">
+    <visual name="head_tilt_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_tilt_link_metal.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <visual name="head_tilt_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_tilt_link_printed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <inertial>
+      <origin xyz="0.01787500362843275 -0.000454118475317955 4.5690685510635376e-05" />
+      <mass value="0.3" />
+      <inertia ixx="0.00035662507248675787" iyy="9.35016219126652e-05" izz="0.0004213265776695685" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.05625000037252903 0.11700000241398811 0.024000048637390137" />
+      </geometry>
+      <origin xyz="0.01787500362843275 -0.000454118475317955 4.5690685510635376e-05" />
+    </collision>
+  </link>
+  <link name="head_camera_link">
+    <visual name="head_camera_link_camera">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_camera_link_camera.stl" />
+      </geometry>
+      <material name="camera" />
+    </visual>
+    <visual name="head_camera_link_optics">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_camera_link_optics.stl" />
+      </geometry>
+      <material name="optics" />
+    </visual>
+    <inertial>
+      <origin xyz="-6.51925802230835e-09 1.30385160446167e-08 -3.91155481338501e-08" />
+      <mass value="0.3" />
+      <inertia ixx="0.00040494673907881285" iyy="3.8047793769738995e-05" izz="0.00040069894186094525" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.025999998673796654 0.12390301749110222 0.02908456325531006" />
+      </geometry>
+      <origin xyz="-6.51925802230835e-09 1.30385160446167e-08 -3.91155481338501e-08" />
+    </collision>
+  </link>
+  <link name="head_camera_optical_frame" />
+  <link name="wrist_camera_link">
+    <visual name="wrist_camera_link_camera">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/wrist_camera_link_camera.stl" />
+      </geometry>
+      <material name="camera" />
+    </visual>
+    <inertial>
+      <origin xyz="-1.5832483768463135e-08 2.3359432816505432e-05 2.1420419216156006e-08" />
+      <mass value="0.3" />
+      <inertia ixx="0.00021747529046296267" iyy="3.131255055512927e-05" izz="0.0002175379006227083" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <collision name="simulation_proxy">
+      <geometry>
+        <box size="0.02505001425743103 0.08985551074147224 0.02499997615814209" />
+      </geometry>
+      <origin xyz="-1.5832483768463135e-08 2.3359432816505432e-05 2.1420419216156006e-08" />
+    </collision>
+  </link>
+  <link name="wrist_camera_optical_frame" />
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.05035" rpy="0 0 0" />
+  </joint>
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="left_wheel_link" />
+    <origin xyz="0 0.1725 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="right_wheel_link" />
+    <origin xyz="0 -0.1725 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="rear_left_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="rear_left_omni_link" />
+    <origin xyz="-0.14 0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="rear_right_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="rear_right_omni_link" />
+    <origin xyz="-0.14 -0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="front_right_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="front_right_omni_link" />
+    <origin xyz="0.13 -0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="front_left_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="front_left_omni_link" />
+    <origin xyz="0.13 0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="lift_joint" type="prismatic">
+    <parent link="base_link" />
+    <child link="lift_link" />
+    <origin xyz="0.06 -0.00247951451335 0.2962501" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0.0" upper="0.2" effort="1000" velocity="0.1" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="joint1" type="revolute">
+    <parent link="lift_link" />
+    <child link="arm_link_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="30" velocity="2.0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="joint2" type="revolute">
+    <parent link="arm_link_1" />
+    <child link="arm_link_2" />
+    <origin xyz="0 0 0.0925204854866" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="30" velocity="2.0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="joint3" type="revolute">
+    <parent link="arm_link_2" />
+    <child link="arm_link_3" />
+    <origin xyz="0.02 0 0.24875" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="30" velocity="2.0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="joint4" type="revolute">
+    <parent link="arm_link_3" />
+    <child link="arm_link_4" />
+    <origin xyz="0.258 0 3e-05" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="30" velocity="2.0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="joint5" type="revolute">
+    <parent link="arm_link_4" />
+    <child link="arm_link_5" />
+    <origin xyz="0.066 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="30" velocity="2.0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="gripper_left_joint" type="prismatic">
+    <parent link="arm_link_5" />
+    <child link="left_finger_link" />
+    <origin xyz="0.0488 0.02225 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.015" effort="30" velocity="0.1" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="gripper_right_joint" type="prismatic">
+    <parent link="arm_link_5" />
+    <child link="right_finger_link" />
+    <origin xyz="0.0488 -0.02225 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.015" effort="30" velocity="0.1" />
+    <mimic joint="gripper_left_joint" multiplier="1" offset="0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="tool0_joint" type="fixed">
+    <parent link="arm_link_5" />
+    <child link="tool0" />
+    <origin xyz="0.1068 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="base_to_pan_joint" type="revolute">
+    <parent link="base_link" />
+    <child link="head_pan_link" />
+    <origin xyz="-0.004245366146 -1.7807411e-05 1.00693584717" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="30" velocity="2.0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="pan_to_tilt_joint" type="revolute">
+    <parent link="head_pan_link" />
+    <child link="head_tilt_link" />
+    <origin xyz="0.024 0 0.019" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.0471975511965976" upper="1.0471975511965976" effort="30" velocity="2.0" />
+    <dynamics damping="0.1" friction="0.01" />
+  </joint>
+  <joint name="head_camera_joint" type="fixed">
+    <parent link="head_tilt_link" />
+    <child link="head_camera_link" />
+    <origin xyz="0.058931751138 -0.0005 -0.000112699168" rpy="0 0 0" />
+  </joint>
+  <joint name="head_camera_optical_joint" type="fixed">
+    <parent link="head_camera_link" />
+    <child link="head_camera_optical_frame" />
+    <origin xyz="0.013 0 0" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <joint name="wrist_camera_joint" type="fixed">
+    <parent link="arm_link_5" />
+    <child link="wrist_camera_link" />
+    <origin xyz="0.003375 0 0.0577499645133" rpy="0 0 0" />
+  </joint>
+  <joint name="wrist_camera_optical_joint" type="fixed">
+    <parent link="wrist_camera_link" />
+    <child link="wrist_camera_optical_frame" />
+    <origin xyz="0.012525 0 0" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <gazebo reference="rear_left_omni_link">
+    <mu1>0.001</mu1>
+    <mu2>0.001</mu2>
+  </gazebo>
+  <gazebo reference="rear_right_omni_link">
+    <mu1>0.001</mu1>
+    <mu2>0.001</mu2>
+  </gazebo>
+  <gazebo reference="front_right_omni_link">
+    <mu1>0.001</mu1>
+    <mu2>0.001</mu2>
+  </gazebo>
+  <gazebo reference="front_left_omni_link">
+    <mu1>0.001</mu1>
+    <mu2>0.001</mu2>
+  </gazebo>
+  <link name="d455_color_optical_frame" />
+  <joint name="d455_color_optical_frame_alias_joint" type="fixed">
+    <parent link="head_camera_optical_frame" />
+    <child link="d455_color_optical_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="d415_color_optical_frame" />
+  <joint name="d415_color_optical_frame_alias_joint" type="fixed">
+    <parent link="wrist_camera_optical_frame" />
+    <child link="d415_color_optical_frame" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="camera_link" />
+  <joint name="camera_link_alias_joint" type="fixed">
+    <parent link="head_camera_link" />
+    <child link="camera_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="d415_link" />
+  <joint name="d415_link_alias_joint" type="fixed">
+    <parent link="wrist_camera_link" />
+    <child link="d415_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="tcp" />
+  <joint name="tcp_alias_joint" type="fixed">
+    <parent link="tool0" />
+    <child link="tcp" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="laser" />
+  <joint name="laser_alias_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="laser" />
+    <origin xyz="0.2 0 0.19965" rpy="0 0 0" />
+  </joint>
+  <link name="bno055_link" />
+  <joint name="bno055_link_alias_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="bno055_link" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="livox_frame" />
+  <joint name="livox_frame_alias_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="livox_frame" />
+    <origin xyz="0.2 0 0.09965" rpy="-0.21 -0.03 -1.57" />
+  </joint>
+</robot>

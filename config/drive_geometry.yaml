@@ -1,0 +1,12 @@
+# CAD nominal geometry; hardware calibration and a ros2_control hardware plugin are required.
+# Only these two wheels are driven. Omni wheels and their rollers are passive.
+diff_drive_controller:
+  ros__parameters:
+    left_wheel_names: [left_wheel_joint]
+    right_wheel_names: [right_wheel_joint]
+    wheel_separation: 0.345
+    wheel_radius: 0.05035
+    # Match the URDF root: odom -> base_footprint -> base_link.
+    base_frame_id: base_footprint
+    odom_frame_id: odom
+    publish_rate: 50.0

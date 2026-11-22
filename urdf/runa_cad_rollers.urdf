@@ -1,0 +1,1934 @@
+<?xml version="1.0"?>
+<robot name="runa">
+  <material name="structure">
+    <color rgba="0.23 0.29 0.33 1" />
+  </material>
+  <material name="metal">
+    <color rgba="0.64 0.69 0.73 1" />
+  </material>
+  <material name="motor">
+    <color rgba="0.12 0.14 0.17 1" />
+  </material>
+  <material name="rubber">
+    <color rgba="0.065 0.07 0.08 1" />
+  </material>
+  <material name="printed">
+    <color rgba="0.12 0.55 0.60 1" />
+  </material>
+  <material name="camera">
+    <color rgba="0.70 0.75 0.80 1" />
+  </material>
+  <material name="optics">
+    <color rgba="0.08 0.09 0.17 1" />
+  </material>
+  <link name="base_footprint" />
+  <link name="base_link">
+    <visual name="base_link_structure">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_structure_detailed.stl" />
+      </geometry>
+      <material name="structure" />
+    </visual>
+    <collision name="base_link_structure">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_structure_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="base_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="base_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_metal_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="base_link_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_motor_detailed.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision name="base_link_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/base_link_motor_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_wheel_link">
+    <visual name="left_wheel_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/left_wheel_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="left_wheel_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/left_wheel_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_wheel_link">
+    <visual name="right_wheel_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/right_wheel_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="right_wheel_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/right_wheel_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_link">
+    <visual name="rear_left_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_link_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="rear_left_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_link_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_link">
+    <visual name="rear_right_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_link_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="rear_right_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_link_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_link">
+    <visual name="front_right_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_link_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="front_right_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_link_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_link">
+    <visual name="front_left_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_link_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="front_left_omni_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_link_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="lift_link">
+    <visual name="lift_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/lift_link_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="lift_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/lift_link_printed_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="arm_link_1">
+    <visual name="arm_link_1_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="arm_link_1_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_metal_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_1_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_motor_detailed.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision name="arm_link_1_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_motor_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_1_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="arm_link_1_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_1_printed_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="arm_link_2">
+    <visual name="arm_link_2_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_motor_detailed.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision name="arm_link_2_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_motor_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_2_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="arm_link_2_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_printed_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_2_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="arm_link_2_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_2_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="arm_link_3">
+    <visual name="arm_link_3_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_motor_detailed.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision name="arm_link_3_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_motor_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_3_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="arm_link_3_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_printed_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_3_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="arm_link_3_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_3_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="arm_link_4">
+    <visual name="arm_link_4_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_4_motor_detailed.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision name="arm_link_4_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_4_motor_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_4_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_4_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="arm_link_4_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_4_printed_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="arm_link_5">
+    <visual name="arm_link_5_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_motor_detailed.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision name="arm_link_5_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_motor_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_5_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="arm_link_5_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_printed_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="arm_link_5_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="arm_link_5_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/arm_link_5_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_finger_link">
+    <visual name="left_finger_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/left_finger_link_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="left_finger_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/left_finger_link_printed_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_finger_link">
+    <visual name="right_finger_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/right_finger_link_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="right_finger_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/right_finger_link_printed_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="tool0" />
+  <link name="head_pan_link">
+    <visual name="head_pan_link_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_pan_link_motor_detailed.stl" />
+      </geometry>
+      <material name="motor" />
+    </visual>
+    <collision name="head_pan_link_motor">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_pan_link_motor_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="head_pan_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_pan_link_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="head_pan_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_pan_link_metal_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="head_tilt_link">
+    <visual name="head_tilt_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_tilt_link_metal_detailed.stl" />
+      </geometry>
+      <material name="metal" />
+    </visual>
+    <collision name="head_tilt_link_metal">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_tilt_link_metal_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="head_tilt_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_tilt_link_printed_detailed.stl" />
+      </geometry>
+      <material name="printed" />
+    </visual>
+    <collision name="head_tilt_link_printed">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_tilt_link_printed_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="head_camera_link">
+    <visual name="head_camera_link_camera">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_camera_link_camera_detailed.stl" />
+      </geometry>
+      <material name="camera" />
+    </visual>
+    <collision name="head_camera_link_camera">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_camera_link_camera_detailed.stl" />
+      </geometry>
+    </collision>
+    <visual name="head_camera_link_optics">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_camera_link_optics_detailed.stl" />
+      </geometry>
+      <material name="optics" />
+    </visual>
+    <collision name="head_camera_link_optics">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/head_camera_link_optics_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="head_camera_optical_frame" />
+  <link name="wrist_camera_link">
+    <visual name="wrist_camera_link_camera">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/wrist_camera_link_camera_detailed.stl" />
+      </geometry>
+      <material name="camera" />
+    </visual>
+    <collision name="wrist_camera_link_camera">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/wrist_camera_link_camera_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="wrist_camera_optical_frame" />
+  <link name="rear_right_omni_roller_01_link">
+    <visual name="rear_right_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_02_link">
+    <visual name="rear_right_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_03_link">
+    <visual name="rear_right_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_04_link">
+    <visual name="rear_right_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_05_link">
+    <visual name="rear_right_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_06_link">
+    <visual name="rear_right_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_07_link">
+    <visual name="rear_right_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_08_link">
+    <visual name="rear_right_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_09_link">
+    <visual name="rear_right_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_10_link">
+    <visual name="rear_right_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_11_link">
+    <visual name="rear_right_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_12_link">
+    <visual name="rear_right_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_13_link">
+    <visual name="rear_right_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_14_link">
+    <visual name="rear_right_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_15_link">
+    <visual name="rear_right_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_16_link">
+    <visual name="rear_right_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_17_link">
+    <visual name="rear_right_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_right_omni_roller_18_link">
+    <visual name="rear_right_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_right_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_right_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_01_link">
+    <visual name="rear_left_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_02_link">
+    <visual name="rear_left_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_03_link">
+    <visual name="rear_left_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_04_link">
+    <visual name="rear_left_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_05_link">
+    <visual name="rear_left_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_06_link">
+    <visual name="rear_left_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_07_link">
+    <visual name="rear_left_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_08_link">
+    <visual name="rear_left_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_09_link">
+    <visual name="rear_left_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_10_link">
+    <visual name="rear_left_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_11_link">
+    <visual name="rear_left_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_12_link">
+    <visual name="rear_left_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_13_link">
+    <visual name="rear_left_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_14_link">
+    <visual name="rear_left_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_15_link">
+    <visual name="rear_left_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_16_link">
+    <visual name="rear_left_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_17_link">
+    <visual name="rear_left_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="rear_left_omni_roller_18_link">
+    <visual name="rear_left_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="rear_left_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/rear_left_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_01_link">
+    <visual name="front_right_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_02_link">
+    <visual name="front_right_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_03_link">
+    <visual name="front_right_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_04_link">
+    <visual name="front_right_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_05_link">
+    <visual name="front_right_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_06_link">
+    <visual name="front_right_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_07_link">
+    <visual name="front_right_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_08_link">
+    <visual name="front_right_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_09_link">
+    <visual name="front_right_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_10_link">
+    <visual name="front_right_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_11_link">
+    <visual name="front_right_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_12_link">
+    <visual name="front_right_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_13_link">
+    <visual name="front_right_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_14_link">
+    <visual name="front_right_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_15_link">
+    <visual name="front_right_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_16_link">
+    <visual name="front_right_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_17_link">
+    <visual name="front_right_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_right_omni_roller_18_link">
+    <visual name="front_right_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_right_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_right_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_01_link">
+    <visual name="front_left_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_01_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_01_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_02_link">
+    <visual name="front_left_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_02_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_02_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_03_link">
+    <visual name="front_left_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_03_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_03_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_04_link">
+    <visual name="front_left_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_04_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_04_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_05_link">
+    <visual name="front_left_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_05_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_05_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_06_link">
+    <visual name="front_left_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_06_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_06_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_07_link">
+    <visual name="front_left_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_07_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_07_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_08_link">
+    <visual name="front_left_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_08_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_08_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_09_link">
+    <visual name="front_left_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_09_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_09_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_10_link">
+    <visual name="front_left_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_10_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_10_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_11_link">
+    <visual name="front_left_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_11_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_11_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_12_link">
+    <visual name="front_left_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_12_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_12_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_13_link">
+    <visual name="front_left_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_13_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_13_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_14_link">
+    <visual name="front_left_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_14_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_14_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_15_link">
+    <visual name="front_left_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_15_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_15_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_16_link">
+    <visual name="front_left_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_16_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_16_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_17_link">
+    <visual name="front_left_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_17_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_17_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="front_left_omni_roller_18_link">
+    <visual name="front_left_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+      <material name="rubber" />
+    </visual>
+    <collision name="front_left_omni_roller_18_link_rubber">
+      <geometry>
+        <mesh filename="package://runa_description/meshes/front_left_omni_roller_18_link_rubber_detailed.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.05035" rpy="0 0 0" />
+  </joint>
+  <joint name="left_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="left_wheel_link" />
+    <origin xyz="0 0.1725 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="right_wheel_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="right_wheel_link" />
+    <origin xyz="0 -0.1725 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="rear_left_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="rear_left_omni_link" />
+    <origin xyz="-0.14 0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="rear_right_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="rear_right_omni_link" />
+    <origin xyz="-0.14 -0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="front_right_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="front_right_omni_link" />
+    <origin xyz="0.13 -0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="front_left_omni_joint" type="continuous">
+    <parent link="base_link" />
+    <child link="front_left_omni_link" />
+    <origin xyz="0.13 0.1732 1.00000000003e-07" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+  </joint>
+  <joint name="lift_joint" type="prismatic">
+    <parent link="base_link" />
+    <child link="lift_link" />
+    <origin xyz="0.06 -0.00247951451335 0.2962501" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="0.0" upper="0.2" effort="1" velocity="0.05" />
+  </joint>
+  <joint name="arm_joint_1" type="revolute">
+    <parent link="lift_link" />
+    <child link="arm_link_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="1" velocity="1" />
+  </joint>
+  <joint name="arm_joint_2" type="revolute">
+    <parent link="arm_link_1" />
+    <child link="arm_link_2" />
+    <origin xyz="0 0 0.0925204854866" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="1" velocity="1" />
+  </joint>
+  <joint name="arm_joint_3" type="revolute">
+    <parent link="arm_link_2" />
+    <child link="arm_link_3" />
+    <origin xyz="0.02 0 0.24875" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="1" velocity="1" />
+  </joint>
+  <joint name="arm_joint_4" type="revolute">
+    <parent link="arm_link_3" />
+    <child link="arm_link_4" />
+    <origin xyz="0.258 0 3e-05" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="1" velocity="1" />
+  </joint>
+  <joint name="arm_joint_5" type="revolute">
+    <parent link="arm_link_4" />
+    <child link="arm_link_5" />
+    <origin xyz="0.066 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit lower="-3.141592653589793" upper="3.141592653589793" effort="1" velocity="1" />
+  </joint>
+  <joint name="gripper_joint" type="prismatic">
+    <parent link="arm_link_5" />
+    <child link="left_finger_link" />
+    <origin xyz="0.0488 0.02225 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.015" effort="1" velocity="0.05" />
+  </joint>
+  <joint name="right_finger_joint" type="prismatic">
+    <parent link="arm_link_5" />
+    <child link="right_finger_link" />
+    <origin xyz="0.0488 -0.02225 0" rpy="0 0 0" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.015" effort="1" velocity="0.05" />
+    <mimic joint="gripper_joint" multiplier="1" offset="0" />
+  </joint>
+  <joint name="tool0_joint" type="fixed">
+    <parent link="arm_link_5" />
+    <child link="tool0" />
+    <origin xyz="0.1068 0 0" rpy="0 0 0" />
+  </joint>
+  <joint name="head_pan_joint" type="revolute">
+    <parent link="base_link" />
+    <child link="head_pan_link" />
+    <origin xyz="-0.004245366146 -1.7807411e-05 1.00693584717" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="1" velocity="1" />
+  </joint>
+  <joint name="head_tilt_joint" type="revolute">
+    <parent link="head_pan_link" />
+    <child link="head_tilt_link" />
+    <origin xyz="0.024 0 0.019" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.0471975511965976" upper="1.0471975511965976" effort="1" velocity="1" />
+  </joint>
+  <joint name="head_camera_joint" type="fixed">
+    <parent link="head_tilt_link" />
+    <child link="head_camera_link" />
+    <origin xyz="0.058931751138 -0.0005 -0.000112699168" rpy="0 0 0" />
+  </joint>
+  <joint name="head_camera_optical_joint" type="fixed">
+    <parent link="head_camera_link" />
+    <child link="head_camera_optical_frame" />
+    <origin xyz="0.013 0 0" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <joint name="wrist_camera_joint" type="fixed">
+    <parent link="arm_link_5" />
+    <child link="wrist_camera_link" />
+    <origin xyz="0.003375 0 0.0577499645133" rpy="0 0 0" />
+  </joint>
+  <joint name="wrist_camera_optical_joint" type="fixed">
+    <parent link="wrist_camera_link" />
+    <child link="wrist_camera_optical_frame" />
+    <origin xyz="0.012525 0 0" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <joint name="rear_right_omni_roller_01_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_01_link" />
+    <origin xyz="6.93889390391e-16 0.0106999880849 0.0405" rpy="0 0 0" />
+    <axis xyz="1 5.27494714575e-14 1.66533453694e-16" />
+  </joint>
+  <joint name="rear_right_omni_roller_02_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_02_link" />
+    <origin xyz="-0.0260328981923 0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 3.91353006123e-14 0.642787609687" />
+  </joint>
+  <joint name="rear_right_omni_roller_03_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_03_link" />
+    <origin xyz="-0.039884713997 0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 7.40504229748e-15 0.984807753012" />
+  </joint>
+  <joint name="rear_right_omni_roller_04_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_04_link" />
+    <origin xyz="-0.0350740288533 0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.76889910713e-14 0.866025403784" />
+  </joint>
+  <joint name="rear_right_omni_roller_05_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_05_link" />
+    <origin xyz="-0.0138518158047 0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -5.01112191817e-14 0.342020143326" />
+  </joint>
+  <joint name="rear_right_omni_roller_06_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_06_link" />
+    <origin xyz="0.0138518158047 0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -4.91042203013e-14 -0.342020143326" />
+  </joint>
+  <joint name="rear_right_omni_roller_07_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_07_link" />
+    <origin xyz="0.0350740288533 0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.48106802057e-14 -0.866025403784" />
+  </joint>
+  <joint name="rear_right_omni_roller_08_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_08_link" />
+    <origin xyz="0.039884713997 0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 1.07469350706e-14 -0.984807753012" />
+  </joint>
+  <joint name="rear_right_omni_roller_09_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_09_link" />
+    <origin xyz="0.0260328981923 0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 4.13175388391e-14 -0.642787609687" />
+  </joint>
+  <joint name="rear_right_omni_roller_10_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_10_link" />
+    <origin xyz="0.039884713997 -0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 7.07197539009e-15 0.984807753012" />
+  </joint>
+  <joint name="rear_right_omni_roller_11_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_11_link" />
+    <origin xyz="0.0260328981923 -0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 3.90242783098e-14 0.642787609687" />
+  </joint>
+  <joint name="rear_right_omni_roller_12_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_12_link" />
+    <origin xyz="1.13797860024e-15 -0.0107000119151 -0.0405" rpy="0 0 0" />
+    <axis xyz="1 5.27494714575e-14 1.66533453694e-16" />
+  </joint>
+  <joint name="rear_right_omni_roller_13_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_13_link" />
+    <origin xyz="-0.0260328981923 -0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 4.13730499903e-14 -0.642787609687" />
+  </joint>
+  <joint name="rear_right_omni_roller_14_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_14_link" />
+    <origin xyz="-0.039884713997 -0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 1.09134685243e-14 -0.984807753012" />
+  </joint>
+  <joint name="rear_right_omni_roller_15_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_15_link" />
+    <origin xyz="-0.0350740288533 -0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.48939469325e-14 -0.866025403784" />
+  </joint>
+  <joint name="rear_right_omni_roller_16_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_16_link" />
+    <origin xyz="-0.0138518158047 -0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -4.87225811365e-14 -0.342020143326" />
+  </joint>
+  <joint name="rear_right_omni_roller_17_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_17_link" />
+    <origin xyz="0.0138518158047 -0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -5.01112191817e-14 0.342020143326" />
+  </joint>
+  <joint name="rear_right_omni_roller_18_joint" type="continuous">
+    <parent link="rear_right_omni_link" />
+    <child link="rear_right_omni_roller_18_link" />
+    <origin xyz="0.0350740288533 -0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.78277689494e-14 0.866025403784" />
+  </joint>
+  <joint name="rear_left_omni_roller_01_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_01_link" />
+    <origin xyz="5.82867087928e-16 -0.0106999880849 0.0405" rpy="0 0 0" />
+    <axis xyz="-1 5.96744875736e-16 -4.4408920985e-16" />
+  </joint>
+  <joint name="rear_left_omni_roller_02_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_02_link" />
+    <origin xyz="0.0260328981923 -0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 -3.13388147111e-16 0.642787609687" />
+  </joint>
+  <joint name="rear_left_omni_roller_03_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_03_link" />
+    <origin xyz="0.039884713997 -0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 -1.48022986494e-15 0.984807753012" />
+  </joint>
+  <joint name="rear_left_omni_roller_04_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_04_link" />
+    <origin xyz="0.0350740288533 -0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 -1.84855017316e-15 0.866025403784" />
+  </joint>
+  <joint name="rear_left_omni_roller_05_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_05_link" />
+    <origin xyz="0.0138518158047 -0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 -1.04173550606e-15 0.342020143326" />
+  </joint>
+  <joint name="rear_left_omni_roller_06_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_06_link" />
+    <origin xyz="-0.0138518158047 -0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 1.10980146335e-16 -0.342020143326" />
+  </joint>
+  <joint name="rear_left_omni_roller_07_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_07_link" />
+    <origin xyz="-0.0350740288533 -0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 9.74249541264e-16 -0.866025403784" />
+  </joint>
+  <joint name="rear_left_omni_roller_08_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_08_link" />
+    <origin xyz="-0.039884713997 -0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 1.72288503008e-15 -0.984807753012" />
+  </joint>
+  <joint name="rear_left_omni_roller_09_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_09_link" />
+    <origin xyz="-0.0260328981923 -0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 1.49414980887e-15 -0.642787609687" />
+  </joint>
+  <joint name="rear_left_omni_roller_10_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_10_link" />
+    <origin xyz="-0.039884713997 0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 -1.28594083563e-15 0.984807753012" />
+  </joint>
+  <joint name="rear_left_omni_roller_11_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_11_link" />
+    <origin xyz="-0.0260328981923 0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 -4.66043812997e-16 0.642787609687" />
+  </joint>
+  <joint name="rear_left_omni_roller_12_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_12_link" />
+    <origin xyz="1.27675647832e-15 0.0107000119151 -0.0405" rpy="0 0 0" />
+    <axis xyz="-1 5.96744875736e-16 -4.4408920985e-16" />
+  </joint>
+  <joint name="rear_left_omni_roller_13_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_13_link" />
+    <origin xyz="0.0260328981923 0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 1.66068326257e-15 -0.642787609687" />
+  </joint>
+  <joint name="rear_left_omni_roller_14_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_14_link" />
+    <origin xyz="0.039884713997 0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 1.66737387885e-15 -0.984807753012" />
+  </joint>
+  <joint name="rear_left_omni_roller_15_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_15_link" />
+    <origin xyz="0.0350740288533 0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 6.41182633876e-16 -0.866025403784" />
+  </joint>
+  <joint name="rear_left_omni_roller_16_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_16_link" />
+    <origin xyz="0.0138518158047 0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 1.45674615854e-16 -0.342020143326" />
+  </joint>
+  <joint name="rear_left_omni_roller_17_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_17_link" />
+    <origin xyz="-0.0138518158047 0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 -1.13888002071e-15 0.342020143326" />
+  </joint>
+  <joint name="rear_left_omni_roller_18_joint" type="continuous">
+    <parent link="rear_left_omni_link" />
+    <child link="rear_left_omni_roller_18_link" />
+    <origin xyz="-0.0350740288533 0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 -1.59874999262e-15 0.866025403784" />
+  </joint>
+  <joint name="front_right_omni_roller_01_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_01_link" />
+    <origin xyz="4.16333634234e-16 0.0106999880849 0.0405" rpy="0 0 0" />
+    <axis xyz="1 5.27494714575e-14 1.66533453694e-16" />
+  </joint>
+  <joint name="front_right_omni_roller_02_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_02_link" />
+    <origin xyz="-0.0260328981923 0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 3.91353006123e-14 0.642787609687" />
+  </joint>
+  <joint name="front_right_omni_roller_03_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_03_link" />
+    <origin xyz="-0.039884713997 0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 7.40504229748e-15 0.984807753012" />
+  </joint>
+  <joint name="front_right_omni_roller_04_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_04_link" />
+    <origin xyz="-0.0350740288533 0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.76889910713e-14 0.866025403784" />
+  </joint>
+  <joint name="front_right_omni_roller_05_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_05_link" />
+    <origin xyz="-0.0138518158047 0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -5.01112191817e-14 0.342020143326" />
+  </joint>
+  <joint name="front_right_omni_roller_06_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_06_link" />
+    <origin xyz="0.0138518158047 0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -4.91042203013e-14 -0.342020143326" />
+  </joint>
+  <joint name="front_right_omni_roller_07_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_07_link" />
+    <origin xyz="0.0350740288533 0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.48106802057e-14 -0.866025403784" />
+  </joint>
+  <joint name="front_right_omni_roller_08_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_08_link" />
+    <origin xyz="0.039884713997 0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 1.07469350706e-14 -0.984807753012" />
+  </joint>
+  <joint name="front_right_omni_roller_09_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_09_link" />
+    <origin xyz="0.0260328981923 0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 4.13175388391e-14 -0.642787609687" />
+  </joint>
+  <joint name="front_right_omni_roller_10_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_10_link" />
+    <origin xyz="0.039884713997 -0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 7.07197539009e-15 0.984807753012" />
+  </joint>
+  <joint name="front_right_omni_roller_11_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_11_link" />
+    <origin xyz="0.0260328981923 -0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 3.90242783098e-14 0.642787609687" />
+  </joint>
+  <joint name="front_right_omni_roller_12_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_12_link" />
+    <origin xyz="8.32667268469e-16 -0.0107000119151 -0.0405" rpy="0 0 0" />
+    <axis xyz="1 5.27494714575e-14 1.66533453694e-16" />
+  </joint>
+  <joint name="front_right_omni_roller_13_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_13_link" />
+    <origin xyz="-0.0260328981923 -0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="0.766044443119 4.13730499903e-14 -0.642787609687" />
+  </joint>
+  <joint name="front_right_omni_roller_14_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_14_link" />
+    <origin xyz="-0.039884713997 -0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="0.173648177667 1.09134685243e-14 -0.984807753012" />
+  </joint>
+  <joint name="front_right_omni_roller_15_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_15_link" />
+    <origin xyz="-0.0350740288533 -0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.48939469325e-14 -0.866025403784" />
+  </joint>
+  <joint name="front_right_omni_roller_16_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_16_link" />
+    <origin xyz="-0.0138518158047 -0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -4.87225811365e-14 -0.342020143326" />
+  </joint>
+  <joint name="front_right_omni_roller_17_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_17_link" />
+    <origin xyz="0.0138518158047 -0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="-0.939692620786 -5.01112191817e-14 0.342020143326" />
+  </joint>
+  <joint name="front_right_omni_roller_18_joint" type="continuous">
+    <parent link="front_right_omni_link" />
+    <child link="front_right_omni_roller_18_link" />
+    <origin xyz="0.0350740288533 -0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="-0.5 -2.78277689494e-14 0.866025403784" />
+  </joint>
+  <joint name="front_left_omni_roller_01_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_01_link" />
+    <origin xyz="-1.38777878078e-16 -0.0106999880849 0.0405" rpy="0 0 0" />
+    <axis xyz="-1 5.96744875736e-16 -4.4408920985e-16" />
+  </joint>
+  <joint name="front_left_omni_roller_02_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_02_link" />
+    <origin xyz="0.0260328981923 -0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 -3.13388147111e-16 0.642787609687" />
+  </joint>
+  <joint name="front_left_omni_roller_03_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_03_link" />
+    <origin xyz="0.039884713997 -0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 -1.48022986494e-15 0.984807753012" />
+  </joint>
+  <joint name="front_left_omni_roller_04_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_04_link" />
+    <origin xyz="0.0350740288533 -0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 -1.84855017316e-15 0.866025403784" />
+  </joint>
+  <joint name="front_left_omni_roller_05_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_05_link" />
+    <origin xyz="0.0138518158047 -0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 -1.04173550606e-15 0.342020143326" />
+  </joint>
+  <joint name="front_left_omni_roller_06_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_06_link" />
+    <origin xyz="-0.0138518158047 -0.0106999880849 -0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 1.10980146335e-16 -0.342020143326" />
+  </joint>
+  <joint name="front_left_omni_roller_07_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_07_link" />
+    <origin xyz="-0.0350740288533 -0.0106999880849 -0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 9.74249541264e-16 -0.866025403784" />
+  </joint>
+  <joint name="front_left_omni_roller_08_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_08_link" />
+    <origin xyz="-0.039884713997 -0.0106999880849 0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 1.72288503008e-15 -0.984807753012" />
+  </joint>
+  <joint name="front_left_omni_roller_09_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_09_link" />
+    <origin xyz="-0.0260328981923 -0.0106999880849 0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 1.49414980887e-15 -0.642787609687" />
+  </joint>
+  <joint name="front_left_omni_roller_10_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_10_link" />
+    <origin xyz="-0.039884713997 0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 -1.28594083563e-15 0.984807753012" />
+  </joint>
+  <joint name="front_left_omni_roller_11_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_11_link" />
+    <origin xyz="-0.0260328981923 0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 -4.66043812997e-16 0.642787609687" />
+  </joint>
+  <joint name="front_left_omni_roller_12_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_12_link" />
+    <origin xyz="6.93889390391e-16 0.0107000119151 -0.0405" rpy="0 0 0" />
+    <axis xyz="-1 5.96744875736e-16 -4.4408920985e-16" />
+  </joint>
+  <joint name="front_left_omni_roller_13_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_13_link" />
+    <origin xyz="0.0260328981923 0.0107000119151 -0.0310247999463" rpy="0 0 0" />
+    <axis xyz="-0.766044443119 1.66068326257e-15 -0.642787609687" />
+  </joint>
+  <joint name="front_left_omni_roller_14_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_14_link" />
+    <origin xyz="0.039884713997 0.0107000119151 -0.00703275119551" rpy="0 0 0" />
+    <axis xyz="-0.173648177667 1.66737387885e-15 -0.984807753012" />
+  </joint>
+  <joint name="front_left_omni_roller_15_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_15_link" />
+    <origin xyz="0.0350740288533 0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 6.41182633876e-16 -0.866025403784" />
+  </joint>
+  <joint name="front_left_omni_roller_16_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_16_link" />
+    <origin xyz="0.0138518158047 0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 1.45674615854e-16 -0.342020143326" />
+  </joint>
+  <joint name="front_left_omni_roller_17_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_17_link" />
+    <origin xyz="-0.0138518158047 0.0107000119151 0.0380575511418" rpy="0 0 0" />
+    <axis xyz="0.939692620786 -1.13888002071e-15 0.342020143326" />
+  </joint>
+  <joint name="front_left_omni_roller_18_joint" type="continuous">
+    <parent link="front_left_omni_link" />
+    <child link="front_left_omni_roller_18_link" />
+    <origin xyz="-0.0350740288533 0.0107000119151 0.02025" rpy="0 0 0" />
+    <axis xyz="0.5 -1.59874999262e-15 0.866025403784" />
+  </joint>
+</robot>
